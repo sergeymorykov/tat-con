@@ -7,15 +7,9 @@ import tt from './locales/tt';
 
 // Ресурсы для локализации
 const resources = {
-  ru: {
-    translation: ru
-  },
-  en: {
-    translation: en
-  },
-  tt: {
-    translation: tt
-  }
+  ru,
+  en,
+  tt
 };
 
 i18n

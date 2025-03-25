@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "uni-connect",
-    "slug": "uni-connect",
+    "name": "tatcon",
+    "slug": "tatcon",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,14 +9,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.uniconnect"
+      "package": "com.anonymous.tatcon",
+      "googleServicesFile": "./google-services.json",
+      "permissions": ["NOTIFICATIONS", "RECEIVE_BOOT_COMPLETED"]
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +38,25 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#0a7ea4",
+          "sounds": ["./assets/sounds/notification.wav"]
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "notification": {
+      "icon": "./assets/images/notification-icon.png",
+      "color": "#0a7ea4",
+      "androidMode": "default",
+      "androidCollapsedTitle": "Уведомления от TatCon",
+      "iosDisplayInForeground": true
     }
   }
 }

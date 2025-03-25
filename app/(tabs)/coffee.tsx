@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { Coffee as CoffeeIcon, Clock as ClockIcon } from 'lucide-react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Animated, { 
   useAnimatedStyle, 
   withSpring,
@@ -58,7 +59,7 @@ export default function RandomCoffeeScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Random Coffee</Text>
       <Text style={styles.subtitle}>
         Get matched with a random student for a coffee chat!
@@ -104,7 +105,7 @@ export default function RandomCoffeeScreen() {
           </TouchableOpacity>
         </View>
       )}
-    </View>
+    </SafeAreaView>
   );
 }
 

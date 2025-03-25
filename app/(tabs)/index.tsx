@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { ThumbsUp as LikeIcon, ThumbsDown as DislikeIcon } from 'lucide-react-native';
 import Animated, { 
   useAnimatedStyle, 
@@ -51,7 +52,7 @@ export default function DiscoverScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Animated.View style={[styles.card, animatedStyle]}>
         <Image source={{ uri: currentProfile.image }} style={styles.image} />
         <View style={styles.info}>
@@ -80,7 +81,7 @@ export default function DiscoverScreen() {
           </TouchableOpacity>
         </View>
       </Animated.View>
-    </View>
+    </SafeAreaView>
   );
 }
 

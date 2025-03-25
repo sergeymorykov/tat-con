@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { MessageCircle as MessageIcon } from 'lucide-react-native';
 
 interface Match {
@@ -45,7 +46,7 @@ export default function MatchesScreen() {
   );
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Your Matches</Text>
       <FlatList
         data={DUMMY_MATCHES}
@@ -53,7 +54,7 @@ export default function MatchesScreen() {
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.listContainer}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
